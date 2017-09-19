@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: kdemo-svc
+  labels:
+    visualize: 'true'
+spec:
+  selector:
+    name: kdemo
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
